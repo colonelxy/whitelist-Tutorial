@@ -19,5 +19,5 @@ contract Whitelist {
         require(numAddressesWhitelisted < maxWhitelistedAddresses, "Max limit reached");
         whitelistedAddresses[msg.sender] = true;
         numAddressesWhitelisted += 1;
-    };
+    }
 }
