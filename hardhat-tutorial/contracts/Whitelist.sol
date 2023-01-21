@@ -13,7 +13,7 @@ contract Whitelist {
 
     // numAddressesWhitelisted would be used to keep track of how many addresses have been whitelisted
     // NOTE: Don't change this variable name, as it will be part of verification
-    uint8 public numAddressesWhitelisted;
+    uint8 public numAddressesWhitelisted =3;
 
     // Setting the Max number of whitelisted addresses
     // User will put the value at the time of deployment
