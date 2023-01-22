@@ -13,7 +13,7 @@ contract Whitelist {
 
     // numAddressesWhitelisted would be used to keep track of how many addresses have been whitelisted
     // NOTE: Don't change this variable name, as it will be part of verification
-    uint8 public numAddressesWhitelisted =3;
+    uint8 public numAddressesWhitelisted;
 
     // Setting the Max number of whitelisted addresses
     // User will put the value at the time of deployment
@@ -29,7 +29,7 @@ contract Whitelist {
         // check if the user has already been whitelisted
         require(!whitelistedAddresses[msg.sender], "Sender has already been whitelisted");
         // check if the numAddressesWhitelisted < maxWhitelistedAddresses, if not then throw an error.
-        require(numAddressesWhitelisted < maxWhitelistedAddresses, "More addresses cant be added, limit reached");
+        require(numAddressesWhitelisted < maxWhitelistedAddresses, "More addresses can't be added, limit reached");
         // Add the address which called the function to the whitelistedAddress array
         whitelistedAddresses[msg.sender] = true;
         // Increase the number of whitelisted addresses
